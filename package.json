@@ -11,16 +11,22 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.2.0",
     "@types/react": "^19.2.18",
     "shadcn": "^4.19.0",
+    "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2"
   },
   "private": true,
   "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "geist": "^1.7.2",
     "next": "^16.3.2",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-aria-components": "^1.20.0",
+    "react-dom": "^19.2.8",
+    "tailwind-merge": "^3.6.0"
   }
 }

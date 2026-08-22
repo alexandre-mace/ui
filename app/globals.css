@@ -1,118 +1,65 @@
+@import "tailwindcss";
+@import "shadcn/tailwind.css";
+
 /* Tokens du thème @alexandremace/theme : la page consomme le kit */
+@theme inline {
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
 :root {
   --radius: 0.625rem;
   --background: #faf8f0;
   --foreground: oklch(0.145 0 0);
   --card: #fdfcf8;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: #fdfcf8;
+  --popover-foreground: oklch(0.145 0 0);
   --primary: #0737ff;
   --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0.008 90);
+  --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.95 0.01 90);
   --muted-foreground: oklch(0.4 0.015 80);
+  --accent: oklch(0.95 0.01 90);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.9 0.015 88);
+  --input: oklch(0.9 0.015 88);
+  --ring: #0737ff;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--foreground);
-  line-height: 1.5;
-  font-size: 16px;
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  /* même lissage que le portfolio : sans lui, macOS rend le texte plus gras */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 5rem 1.5rem;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin: 0 0 0.75rem;
-}
-
-p {
-  margin: 0 0 1.25rem;
-}
-
-/* convention kit : le paragraphe d'intro murmure, les saillances parlent */
-.lead {
-  color: var(--muted-foreground);
-}
-
-/* même recette que les liens du portfolio */
-a {
-  color: var(--primary);
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--primary) 40%, transparent);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s ease;
-}
-
-a:hover {
-  text-decoration-color: var(--primary);
-}
-
-/* fidélité au Button stock : enfoncement d'1px au pressed */
-a:active,
-button:active {
-  transform: translateY(1px);
-}
-
-pre {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1rem 1.25rem;
-  overflow-x: auto;
-  margin: 0 0 1.5rem;
-}
-
-code {
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.85rem;
-}
-
-.items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* bouton outline shadcn stock (aria-nova) : bordure neutre, hover bg-muted */
-.items a {
-  display: inline-flex;
-  align-items: center;
-  height: 2rem;
-  padding: 0 0.625rem;
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--foreground);
-  text-decoration: none;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-
-.items a:hover {
-  background: var(--muted);
-}
-
-.muted {
-  color: var(--muted-foreground);
-  font-size: 0.875rem;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
