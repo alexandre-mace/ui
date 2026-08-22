@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "theme",
   "title": "Alexandre Macé",
-  "description": "Thème de base : fond sable, bleu #0737FF, thème clair unique. Chaque projet peut surcharger ses tokens d'identité (--primary, --background, --font-display).",
+  "description": "Thème de base : fond sable, bleu #0737FF, thème clair unique. Chaque projet peut surcharger ses tokens d'identité (--primary, --background, --font-display). Police : Geist via le paquet npm geist (reco Vercel).",
   "cssVars": {
     "light": {
       "radius": "0.625rem",
@@ -29,6 +29,14 @@
       "chart-3": "oklch(0.398 0.07 227.392)",
       "chart-4": "oklch(0.828 0.189 84.429)",
       "chart-5": "oklch(0.769 0.188 70.08)"
+    }
+  },
+  "css": {
+    "@layer base": {
+      "body": {
+        "-webkit-font-smoothing": "antialiased",
+        "-moz-osx-font-smoothing": "grayscale"
+      }
     }
   },
   "type": "registry:theme"
