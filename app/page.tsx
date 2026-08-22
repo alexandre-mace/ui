@@ -1,4 +1,5 @@
 import { LinkButton } from "@/registry/ui/button";
+import { Showcase } from "@/components/showcase";
 
 export default function Home() {
   return (
@@ -31,9 +32,10 @@ export default function Home() {
           button
         </LinkButton>
       </div>
+      <Showcase />
       <p className="mt-10 text-sm text-muted-foreground">
-        Cette page est rendue avec les composants du registry : les boutons
-        ci-dessus sont le button.tsx que la commande installe.
+        Cette page est rendue avec les composants du kit : le button.tsx
+        affiché ici est celui que la commande installe.
       </p>
     </main>
   );
