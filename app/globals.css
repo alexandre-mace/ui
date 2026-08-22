@@ -21,6 +21,10 @@ body {
   color: var(--foreground);
   line-height: 1.65;
   font-size: 16px;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  /* même lissage que le portfolio : sans lui, macOS rend le texte plus gras */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
