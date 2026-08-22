@@ -32,6 +32,10 @@
     }
   },
   "css": {
+    "@theme inline": {
+      "--font-sans": "var(--font-geist-sans), system-ui, sans-serif",
+      "--font-mono": "var(--font-geist-mono), monospace"
+    },
     "@layer base": {
       "body": {
         "-webkit-font-smoothing": "antialiased",

@@ -63,6 +63,12 @@ a:hover {
   text-decoration-color: var(--primary);
 }
 
+/* fidélité au Button stock : enfoncement d'1px au pressed */
+a:active,
+button:active {
+  transform: translateY(1px);
+}
+
 pre {
   background: var(--card);
   border: 1px solid var(--border);
