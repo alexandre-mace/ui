@@ -1,10 +1,12 @@
-import { Slider } from "@/components/ui/slider";
+import { Slider } from "@/components/alexandremace/slider";
 
 export const slider = {
   name: "slider",
   components: {
     Default: (
-      <Slider defaultValue={[50]} max={100} step={1} className="mt-5 w-[60%]" />
+      <div className="w-64">
+        <Slider aria-label="Intensité" defaultValue={40} minValue={0} maxValue={100} />
+      </div>
     ),
   },
 };

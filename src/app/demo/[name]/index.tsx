@@ -1,6 +1,12 @@
 import type { ReactElement, ReactNode } from "react";
 
+import { badge } from "@/app/demo/[name]/ui/badge";
 import { button } from "@/app/demo/[name]/ui/button";
+import { checkbox } from "@/app/demo/[name]/ui/checkbox";
+import { input } from "@/app/demo/[name]/ui/input";
+import { slider } from "@/app/demo/[name]/ui/slider";
+import { switchDemo } from "@/app/demo/[name]/ui/switch";
+import { tabs } from "@/app/demo/[name]/ui/tabs";
 
 interface Demo {
   name: string; // this must match the `registry.json` name
@@ -11,4 +17,10 @@ interface Demo {
 
 export const demos: { [name: string]: Demo } = {
   button,
+  input,
+  switch: switchDemo,
+  slider,
+  tabs,
+  badge,
+  checkbox,
 };

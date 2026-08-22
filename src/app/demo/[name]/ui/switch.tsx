@@ -1,14 +1,9 @@
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
+import { Switch } from "@/components/alexandremace/switch";
 
-export const switchComponent = {
+export const switchDemo = {
   name: "switch",
   components: {
-    Default: (
-      <div className="flex items-center space-x-2">
-        <Switch id="airplane-mode" />
-        <Label htmlFor="airplane-mode">Airplane Mode</Label>
-      </div>
-    ),
+    Default: <Switch aria-label="Notifications" />,
+    Selected: <Switch defaultSelected aria-label="Notifications actives" />,
   },
 };

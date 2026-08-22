@@ -54,12 +54,112 @@
       "type": "registry:ui",
       "title": "Button",
       "description": "Button et LinkButton sur base react-aria-components (style aria-nova). Écart au stock : variant outline sur bg-card.",
-      "dependencies": ["react-aria-components", "class-variance-authority"],
+      "dependencies": [
+        "react-aria-components",
+        "class-variance-authority"
+      ],
       "files": [
         {
           "path": "src/components/alexandremace/button.tsx",
           "type": "registry:ui",
           "target": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Champ de saisie sur base react-aria-components.",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/input.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Interrupteur accessible sur base react-aria-components.",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Curseur sur base react-aria-components. Écart au stock : piste plus visible (h-1.5, neutral-300/70) et poignée size-4.",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Onglets segmentés avec navigation clavier, sur base react-aria-components.",
+      "dependencies": [
+        "react-aria-components",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Étiquette de métadonnée.",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/badge.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Case à cocher accessible sur base react-aria-components.",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
         }
       ]
     }

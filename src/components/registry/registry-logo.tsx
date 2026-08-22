@@ -1,10 +1,8 @@
-import { Squirrel } from "lucide-react";
-
 export function RegistryLogo() {
   return (
     <>
-      <div className="flex-shrink-0 rounded-md bg-primary p-1">
-        <Squirrel className="size-5 text-secondary" />
+      <div className="flex-shrink-0 rounded-md bg-primary px-1.5 py-0.5">
+        <span className="font-mono font-semibold text-primary-foreground text-sm">ui</span>
       </div>
       <span className="font-semibold">@alexandremace/ui</span>
     </>

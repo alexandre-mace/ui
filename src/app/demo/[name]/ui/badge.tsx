@@ -1,45 +1,17 @@
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Badge } from "@/components/alexandremace/badge";
 
 export const badge = {
   name: "badge",
   components: {
-    Default: <Badge>Badge</Badge>,
-    Secondary: <Badge variant="secondary">Secondary</Badge>,
-    Outline: <Badge variant="outline">Secondary</Badge>,
-    Destructive: <Badge variant="destructive">Destructive</Badge>,
-
-    DefaultLink: (
-      <Badge>
-        <Link href="#" className="flex items-center gap-1">
-          Link
-          <ArrowRight className="size-3" />
-        </Link>
+    Default: <Badge className="font-mono font-normal">next.js</Badge>,
+    Secondary: (
+      <Badge variant="secondary" className="font-mono font-normal">
+        climate
       </Badge>
     ),
-    SecondaryLink: (
-      <Badge variant="secondary">
-        <Link href="#" className="flex items-center gap-1">
-          Link
-          <ArrowRight className="size-3" />
-        </Link>
-      </Badge>
-    ),
-    OutlineLink: (
-      <Badge variant="outline">
-        <Link href="#" className="flex items-center gap-1">
-          Link
-          <ArrowRight className="size-3" />
-        </Link>
-      </Badge>
-    ),
-    DestructiveLink: (
-      <Badge variant="destructive">
-        <Link href="#" className="flex items-center gap-1">
-          Link
-          <ArrowRight className="size-3" />
-        </Link>
+    Outline: (
+      <Badge variant="outline" className="font-mono font-normal">
+        design
       </Badge>
     ),
   },
