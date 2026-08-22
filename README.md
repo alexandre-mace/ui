@@ -1,7 +1,8 @@
 # ui — le registry shadcn d'Alexandre Macé
 
-Registry personnel (`@alexandremace`) : thème et composants partagés entre mes
-projets (portfolio, Footprint, Transitions…), sur base shadcn aria-nova.
+Registry personnel (`@alexandremace`) : thème et composants partagés entre
+projets (portfolio, Footprint…), sur base shadcn aria-nova (React Aria).
+Construit sur le [Registry Starter](https://vercel.com/templates/next.js/shadcn-ui-registry-starter) de Vercel.
 
 ## Consommer
 
@@ -19,22 +20,23 @@ Puis :
 npx shadcn@latest add @alexandremace/theme @alexandremace/button
 ```
 
-## Philosophie
+## Grammaire du kit
 
-- **L'identité vit dans les tokens.** `theme` porte la base (sable, bleu
-  #0737FF, radius, thème clair unique). Un projet garde sa personnalité en
-  surchargeant 2-3 tokens (`--primary`, `--background`, `--font-display`)
-  après l'import.
-- **Le moins de forks possible.** Seuls les composants qui dévient du stock
-  aria-nova vivent ici ; le reste s'installe depuis le registre officiel.
-- **Jamais d'édition locale de `ui/` dans les projets.** Les mises à jour se
-  propagent par `npx shadcn add -y -o @alexandremace/...` — toute retouche
-  locale serait écrasée.
+- L'identité vit dans les tokens : sable #FAF8F0, cartes #FDFCF8, bleu
+  #0737FF, radius 0.625rem, thème clair unique, Geist (paquet npm) avec
+  antialiased. Un projet surcharge ses tokens d'identité après import.
+- Geist Sans = prose et actions, Geist Mono = données et métadonnées,
+  primary = réservé aux actions (liens, CTA).
+- Lead en muted-foreground, emphase non-cliquable en font-medium
+  foreground.
+- Écart au stock assumé (unique) : bouton outline sur bg-card. Tout écart
+  vit ici, jamais dans un projet consommateur.
+- Ne jamais éditer ui/ localement dans les consommateurs : propagation par
+  `npx shadcn add -y -o @alexandremace/...`.
 
 ## Développer
 
 ```bash
-npm run build   # génère public/r/*.json depuis registry.json
+npm run dev     # registry:build + next dev
+npm run build   # registry:build + next build
 ```
-
-Déployé sur Vercel, sortie statique dans `public/`.
