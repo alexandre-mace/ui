@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main>
       <h1>@alexandremace/ui</h1>
-      <p>
+      <p className="lead">
         Le registry shadcn d&apos;
         <a href="https://alexandremace.fr">Alexandre Macé</a> : un thème et des
         composants partagés entre projets, sur base React Aria.

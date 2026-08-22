@@ -44,6 +44,11 @@ p {
   margin: 0 0 1.25rem;
 }
 
+/* convention kit : le paragraphe d'intro murmure, les saillances parlent */
+.lead {
+  color: var(--muted-foreground);
+}
+
 /* même recette que les liens du portfolio */
 a {
   color: var(--primary);
