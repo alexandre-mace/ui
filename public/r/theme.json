@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "theme",
+  "title": "Alexandre Macé",
+  "description": "Thème de base : fond sable, bleu #0737FF, thème clair unique. Chaque projet peut surcharger ses tokens d'identité (--primary, --background, --font-display).",
+  "cssVars": {
+    "light": {
+      "radius": "0.625rem",
+      "background": "#FAF8F0",
+      "foreground": "oklch(0.145 0 0)",
+      "card": "#FDFCF8",
+      "card-foreground": "oklch(0.145 0 0)",
+      "popover": "#FDFCF8",
+      "popover-foreground": "oklch(0.145 0 0)",
+      "primary": "#0737FF",
+      "primary-foreground": "oklch(0.985 0 0)",
+      "secondary": "oklch(0.97 0.008 90)",
+      "secondary-foreground": "oklch(0.205 0 0)",
+      "muted": "oklch(0.95 0.01 90)",
+      "muted-foreground": "oklch(0.4 0.015 80)",
+      "accent": "oklch(0.95 0.01 90)",
+      "accent-foreground": "oklch(0.205 0 0)",
+      "destructive": "oklch(0.577 0.245 27.325)",
+      "border": "oklch(0.9 0.015 88)",
+      "input": "oklch(0.9 0.015 88)",
+      "ring": "#0737FF",
+      "chart-1": "oklch(0.646 0.222 41.116)",
+      "chart-2": "oklch(0.6 0.118 184.704)",
+      "chart-3": "oklch(0.398 0.07 227.392)",
+      "chart-4": "oklch(0.828 0.189 84.429)",
+      "chart-5": "oklch(0.769 0.188 70.08)"
+    }
+  },
+  "type": "registry:theme"
+}
