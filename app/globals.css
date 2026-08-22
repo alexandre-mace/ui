@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "shadcn/tailwind.css";
 
+@custom-variant dark (&:is(.dark *));
+
 /* Tokens du thème @alexandremace/theme : la page consomme le kit */
 @theme inline {
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
