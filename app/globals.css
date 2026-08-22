@@ -77,22 +77,24 @@ code {
   list-style: none;
 }
 
+/* bouton outline shadcn stock (aria-nova) : bordure neutre, hover bg-muted */
 .items a {
   display: inline-flex;
   align-items: center;
-  background: var(--card);
+  height: 2rem;
+  padding: 0 0.625rem;
+  background: var(--background);
   border: 1px solid var(--border);
-  border-radius: calc(var(--radius) - 2px);
-  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius);
   font-size: 0.875rem;
+  font-weight: 500;
   color: var(--foreground);
   text-decoration: none;
-  transition: border-color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-/* convention portfolio : bordure primary à 40 % au hover */
 .items a:hover {
-  border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+  background: var(--muted);
 }
 
 .muted {
