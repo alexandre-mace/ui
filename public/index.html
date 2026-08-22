@@ -79,7 +79,10 @@
         text-decoration: none;
         transition: border-color 0.15s ease;
       }
-      .items a:hover { border-color: var(--primary); }
+      .items a:hover {
+        /* même formule que les cartes du portfolio : primary à 40 % */
+        border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+      }
       .muted {
         color: var(--muted-foreground);
         font-size: 0.875rem;
@@ -90,7 +93,7 @@
     <h1>@alexandremace/ui</h1>
     <p>
       Le registry shadcn d'<a href="https://alexandremace.fr">Alexandre Macé</a> :
-      un thème et des composants partagés entre projets, sur base aria-nova.
+      un thème et des composants partagés entre projets, sur base React Aria.
     </p>
     <pre><code>npx shadcn@latest add @alexandremace/theme</code></pre>
     <ul class="items">
@@ -98,8 +101,8 @@
       <li><a href="/r/button.json">button</a></li>
     </ul>
     <p class="muted" style="margin-top: 2.5rem">
-      Cette page est stylée avec les tokens du thème lui-même — fond sable,
-      cartes, bleu, radius.
+      Cette page est stylée avec les tokens du thème : fond sable, cartes,
+      bleu, radius.
     </p>
   </body>
 </html>
