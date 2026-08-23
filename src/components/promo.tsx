@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/button";
 
 export function Promo({
   title,
@@ -24,9 +24,9 @@ export function Promo({
         </h1>
         <p>{description}</p>
         <div>
-          <Button asChild size="lg" className="rounded-md">
-            <Link href={buttonLink}>{buttonText}</Link>
-          </Button>
+          <LinkButton href={buttonLink} size="lg" className="rounded-md">
+            {buttonText}
+          </LinkButton>
         </div>
       </div>
     </div>

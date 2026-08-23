@@ -41,22 +41,22 @@ export function MCPTabs({ rootUrl }: { rootUrl: string }) {
   }, [hasCopied]);
 
   return (
-    <Tabs value={tab} onValueChange={setTab}>
+    <Tabs selectedKey={tab} onSelectionChange={(cle) => setTab(String(cle))}>
       <div className="flex items-center justify-between">
         <TabsList>
-          <TabsTrigger value="cursor">Cursor</TabsTrigger>
-          <TabsTrigger value="windsurf">Windsurf</TabsTrigger>
+          <TabsTrigger id="cursor">Cursor</TabsTrigger>
+          <TabsTrigger id="windsurf">Windsurf</TabsTrigger>
         </TabsList>
       </div>
 
-      <TabsContent value="cursor">
+      <TabsContent id="cursor">
         <p className="text-muted-foreground text-sm">
           Click Add to Cursor or copy and paste the code into{" "}
           <code className="inline text-sm tabular-nums">.cursor/mcp.json</code>
         </p>
       </TabsContent>
 
-      <TabsContent value="windsurf">
+      <TabsContent id="windsurf">
         <p className="text-muted-foreground text-sm">
           Copy and paste the code into{" "}
           <code className="inline text-sm tabular-nums">

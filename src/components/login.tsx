@@ -82,7 +82,7 @@ function LoginForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full" disabled={isLoading}>
+          <Button type="submit" className="w-full" isDisabled={isLoading}>
             {isLoading ? "Signing in..." : "Sign in"}
           </Button>
         </form>
@@ -100,10 +100,10 @@ function LoginForm() {
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        <Button variant="outline" type="button" disabled={isLoading}>
+        <Button variant="outline" type="button" isDisabled={isLoading}>
           Google
         </Button>
-        <Button variant="outline" type="button" disabled={isLoading}>
+        <Button variant="outline" type="button" isDisabled={isLoading}>
           Microsoft
         </Button>
       </div>

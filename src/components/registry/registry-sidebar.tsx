@@ -124,7 +124,7 @@ export function RegistrySidebar() {
       </SidebarHeader>
 
       <SidebarContent className="pr-2">
-          <Collapsible defaultOpen={true} className="group/collapsible">
+          <Collapsible defaultExpanded className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
@@ -144,15 +144,11 @@ export function RegistrySidebar() {
                     {gettingStartedItems.map((item) => (
                       <SidebarMenuItem key={item.path}>
                         <SidebarMenuButton
-                          asChild
+                          href={item.path}
                           isActive={pathname === item.path}
+                          onPress={() => setOpenMobile(false)}
                         >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={item.path}
-                          >
                             {item.title}
-                          </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
                     ))}
@@ -162,7 +158,7 @@ export function RegistrySidebar() {
             </SidebarGroup>
           </Collapsible>
 
-          <Collapsible defaultOpen={true} className="group/collapsible">
+          <Collapsible defaultExpanded className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
@@ -182,15 +178,11 @@ export function RegistrySidebar() {
                     {filteredBlocks.map((item) => (
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
-                          asChild
+                          href={`/registry/${item.name}`}
                           isActive={pathname === item.name}
+                          onPress={() => setOpenMobile(false)}
                         >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={`/registry/${item.name}`}
-                          >
-                            {item.title}
-                          </Link>
+                          {item.title}
                         </SidebarMenuButton>
                       </SidebarMenuItem>
                     ))}
@@ -200,7 +192,7 @@ export function RegistrySidebar() {
             </SidebarGroup>
           </Collapsible>
 
-          <Collapsible defaultOpen={true} className="group/collapsible">
+          <Collapsible defaultExpanded className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
@@ -220,15 +212,11 @@ export function RegistrySidebar() {
                     {filteredComponents.map((item) => (
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
-                          asChild
+                          href={`/registry/${item.name}`}
                           isActive={pathname === item.name}
+                          onPress={() => setOpenMobile(false)}
                         >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={`/registry/${item.name}`}
-                          >
-                            {item.title}
-                          </Link>
+                          {item.title}
                         </SidebarMenuButton>
                       </SidebarMenuItem>
                     ))}
@@ -238,7 +226,7 @@ export function RegistrySidebar() {
             </SidebarGroup>
           </Collapsible>
 
-          <Collapsible defaultOpen={true} className="group/collapsible">
+          <Collapsible defaultExpanded className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
@@ -257,15 +245,11 @@ export function RegistrySidebar() {
                     {filteredUiItems.map((item) => (
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
-                          asChild
+                          href={`/registry/${item.name}`}
                           isActive={pathname === item.name}
+                          onPress={() => setOpenMobile(false)}
                         >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={`/registry/${item.name}`}
-                          >
-                            {item.title}
-                          </Link>
+                          {item.title}
                         </SidebarMenuButton>
                       </SidebarMenuItem>
                     ))}

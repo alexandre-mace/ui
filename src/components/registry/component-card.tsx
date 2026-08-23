@@ -14,8 +14,6 @@ import {
 } from "@/components/ui/card";
 import {
   Tooltip,
-  TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import type { Component } from "@/lib/registry";
@@ -62,27 +60,21 @@ export function ComponentCard({
               <CardDescription>{component.description}</CardDescription>
 
               <div className="flex items-center gap-1 sm:ml-auto">
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipContent className="font-mono">
-                      Copy npx command
-                    </TooltipContent>
-                    <TooltipTrigger asChild>
-                      <Button
-                        onClick={copyToClipboard}
-                        variant="outline"
-                        className="p-4"
-                        aria-label="Copy npx command to clipboard"
-                      >
-                        {copied ? (
-                          <Check className="size-4" />
-                        ) : (
-                          <Copy className="size-4" />
-                        )}
-                      </Button>
-                    </TooltipTrigger>
-                  </Tooltip>
-                </TooltipProvider>
+                <TooltipTrigger>
+                  <Button
+                    onPress={copyToClipboard}
+                    variant="outline"
+                    className="p-4"
+                    aria-label="Copy npx command to clipboard"
+                  >
+                    {copied ? (
+                      <Check className="size-4" />
+                    ) : (
+                      <Copy className="size-4" />
+                    )}
+                  </Button>
+                  <Tooltip className="font-mono">Copy npx command</Tooltip>
+                </TooltipTrigger>
 
                 <OpenInV0Button
                   registryUrl={v0RegistryUrl}

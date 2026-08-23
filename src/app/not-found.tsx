@@ -4,7 +4,7 @@ import {
   MobileSidebarTrigger,
   RegistrySidebar,
 } from "@/components/registry/registry-sidebar";
-import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/button";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -22,12 +22,10 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <div className="mt-8 flex gap-3">
-            <Button asChild>
-              <Link href="/">Go Home</Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link href="/r/registry.json">View Registry</Link>
-            </Button>
+            <LinkButton href="/">Go Home</LinkButton>
+            <LinkButton variant="outline" href="/r/registry.json">
+              View Registry
+            </LinkButton>
           </div>
         </div>
       </main>

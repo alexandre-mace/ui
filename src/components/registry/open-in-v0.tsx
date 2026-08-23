@@ -1,4 +1,4 @@
-import { type MouseEvent, useCallback } from "react";
+import { useCallback } from "react";
 import type { ComponentProps } from "react";
 import { toast } from "sonner";
 
@@ -33,9 +33,8 @@ export function OpenInV0Button({
   const url = buildV0Url(registryUrl, title, prompt);
 
   const handleClick = useCallback(
-    (e: MouseEvent<HTMLButtonElement>) => {
+    () => {
       if (process.env.NODE_ENV === "development") {
-        e.preventDefault();
         toast.warning("You're on localhost", {
           description:
             "Open in v0 does not work in development mode, please deploy first.",
@@ -51,7 +50,7 @@ export function OpenInV0Button({
     <Button
       aria-label="Open in v0"
       className={`flex items-center gap-2 rounded-md bg-black px-4 py-2 text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 ${className}`}
-      onClick={handleClick}
+      onPress={handleClick}
       {...props}
     >
       <span>Open in</span>

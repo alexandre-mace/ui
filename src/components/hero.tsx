@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/button";
 
 export function Hero({
   title,
@@ -29,14 +29,14 @@ export function Hero({
           </h1>
           <p className="mt-6 text-xl">{description}</p>
           <div className="mt-10">
-            <Button
-              asChild
+            <LinkButton
+              href={buttonLink}
               variant="secondary"
               size="lg"
               className="rounded-md px-8"
             >
-              <Link href={buttonLink}>{buttonText}</Link>
-            </Button>
+              {buttonText}
+            </LinkButton>
           </div>
         </div>
       </div>

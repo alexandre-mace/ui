@@ -7,7 +7,7 @@ import {
   MobileSidebarTrigger,
   RegistrySidebar,
 } from "@/components/registry/registry-sidebar";
-import { Button } from "@/components/ui/button";
+import { Button, LinkButton } from "@/components/ui/button";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -35,10 +35,10 @@ export default function ErrorPage({
             Something went wrong
           </h2>
           <div className="mt-6 flex gap-3">
-            <Button onClick={reset}>Try Again</Button>
-            <Button variant="secondary" asChild>
-              <Link href="/r/registry.json">View Registry</Link>
-            </Button>
+            <Button onPress={reset}>Try Again</Button>
+            <LinkButton variant="secondary" href="/r/registry.json">
+              View Registry
+            </LinkButton>
           </div>
         </div>
       </main>

@@ -21,6 +21,12 @@ import { switchDemo } from "@/app/demo/[name]/ui/switch";
 import { tabs } from "@/app/demo/[name]/ui/tabs";
 import { textLink } from "@/app/demo/[name]/ui/text-link";
 import { pageHero, toolShell } from "@/app/demo/[name]/ui/blocks-am";
+import {
+  alertDemo,
+  backToTopDemo,
+  linkCardDemo,
+  searchTriggerDemo,
+} from "@/app/demo/[name]/ui/kit-nouveaux";
 
 interface Demo {
   name: string; // this must match the `registry.json` name
@@ -45,6 +51,10 @@ export const demos: { [name: string]: Demo } = {
   "tag-filter": tagFilter,
   "page-hero": pageHero,
   "tool-shell": toolShell,
+  alert: alertDemo,
+  "link-card": linkCardDemo,
+  "search-trigger": searchTriggerDemo,
+  "back-to-top": backToTopDemo,
   toggle: toggleDemo,
   textarea: textareaDemo,
   dialog: dialogDemo,

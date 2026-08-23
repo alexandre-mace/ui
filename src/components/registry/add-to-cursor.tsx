@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/button";
 
 export function AddToCursor({
   mcp,
@@ -15,12 +15,12 @@ export function AddToCursor({
   }
 
   return (
-    <Button
+    <LinkButton
       size="sm"
       className="bg-black text-white hover:bg-black hover:shadow-sm dark:bg-white dark:text-black dark:hover:bg-white"
-      asChild
+      href={generateCursorDeeplink()}
     >
-      <Link href={generateCursorDeeplink()}>
+      <>
         <img
           src="https://cursor.com/deeplink/mcp-install-light.svg"
           alt="Add shadcn/ui Registry MCP server to Cursor"
@@ -33,7 +33,7 @@ export function AddToCursor({
           height="80"
           className="block dark:hidden"
         />
-      </Link>
-    </Button>
+      </>
+    </LinkButton>
   );
 }
