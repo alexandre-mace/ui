@@ -162,6 +162,51 @@
           "target": "components/ui/checkbox.tsx"
         }
       ]
+    },
+    {
+      "name": "brand",
+      "type": "registry:component",
+      "title": "Brand",
+      "description": "Logo et nom du projet en haut à gauche, lien vers la home (le domaine sans chemin).",
+      "files": [
+        {
+          "path": "src/components/alexandremace/brand.tsx",
+          "type": "registry:component",
+          "target": "components/brand.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components"
+      ]
+    },
+    {
+      "name": "climatelab-badge",
+      "type": "registry:component",
+      "title": "ClimateLab badge",
+      "description": "Badge « un outil du ClimateLab » avec lien vers climatelab.fr, commun aux outils du lab.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/climatelab-badge.tsx",
+          "type": "registry:component",
+          "target": "components/climatelab-badge.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components"
+      ]
+    },
+    {
+      "name": "made-with-love",
+      "type": "registry:component",
+      "title": "Made with love",
+      "description": "Footer « Fait avec amour par… », commun à tous les projets.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/made-with-love.tsx",
+          "type": "registry:component",
+          "target": "components/made-with-love.tsx"
+        }
+      ]
     }
   ]
 }
