@@ -70,7 +70,7 @@
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
-      "description": "Champ de saisie sur base react-aria-components.",
+      "description": "Champ de saisie sur base react-aria-components. Écart au stock : halo de focus adouci (ring-ring/25), la bordure ring garde le signal.",
       "dependencies": [
         "react-aria-components"
       ],

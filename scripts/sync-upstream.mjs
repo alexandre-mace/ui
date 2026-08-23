@@ -10,12 +10,13 @@
  * Écarts au stock :
  * - button : variant outline sur bg-card (surfaces posées sur le fond sable)
  * - slider : piste h-1.5 bg-neutral-300/70, poignée size-4 (lisibilité)
+ * - input : halo de focus adouci (ring-ring/25)
  */
 import { execSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
-const STOCK = ["input", "switch", "tabs", "badge", "checkbox"];
-const DEVIATED = ["button", "slider"];
+const STOCK = ["switch", "tabs", "badge", "checkbox"];
+const DEVIATED = ["button", "slider", "input"];
 const APPLY = process.argv.includes("--apply");
 
 const localPath = (name) => `src/components/alexandremace/${name}.tsx`;
