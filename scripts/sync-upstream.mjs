@@ -17,8 +17,8 @@
 import { execSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
-const STOCK = ["switch", "tabs", "badge", "checkbox", "toggle", "toggle-group", "textarea", "dialog", "command"];
-const DEVIATED = ["button", "slider", "input", "input-group"];
+const STOCK = ["switch", "badge", "checkbox", "toggle", "toggle-group", "textarea", "dialog", "command"];
+const DEVIATED = ["button", "slider", "input", "input-group", "tabs"];
 const APPLY = process.argv.includes("--apply");
 
 const localPath = (name) => `src/components/alexandremace/${name}.tsx`;

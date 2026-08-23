@@ -137,7 +137,7 @@
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
-      "description": "Onglets segmentés avec navigation clavier, sur base react-aria-components.",
+      "description": "Onglets sur base react-aria-components. Écart au stock : l'onglet actif est en bg-card, pas bg-background (le stock suppose un fond blanc ; sur notre fond sable, bg-background ne détache pas l'onglet actif de la liste).",
       "dependencies": [
         "react-aria-components",
         "class-variance-authority"
