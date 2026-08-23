@@ -45,11 +45,15 @@
           "chart-2": "oklch(0.6 0.118 184.704)",
           "chart-3": "oklch(0.398 0.07 227.392)",
           "chart-4": "oklch(0.828 0.189 84.429)",
-          "chart-5": "oklch(0.769 0.188 70.08)"
+          "chart-5": "oklch(0.769 0.188 70.08)",
+          "warning": "oklch(0.52 0.13 70)",
+          "success": "oklch(0.48 0.12 150)"
         },
         "theme": {
           "font-sans": "var(--font-geist-sans), system-ui, sans-serif",
-          "font-mono": "var(--font-geist-mono), monospace"
+          "font-mono": "var(--font-geist-mono), monospace",
+          "color-warning": "var(--warning)",
+          "color-success": "var(--success)"
         }
       }
     },
@@ -164,6 +168,22 @@
           "path": "src/components/alexandremace/badge.tsx",
           "type": "registry:ui",
           "target": "components/ui/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "Alerte sur base react-aria-components. Écarts au stock : trois variants de plus (warning, success, info) sur les tokens du thème, et un lavis coloré en fond plutôt que bg-card (sur nos panneaux déjà en couleur carte, une alerte en bg-card ne se détache plus). La description suit la couleur du variant à 90 % ; info fait exception avec une description en muted, c'est le ton de contexte.",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/alert.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert.tsx"
         }
       ]
     },
@@ -419,6 +439,23 @@
           "path": "src/components/alexandremace/tool-shell.tsx",
           "type": "registry:block",
           "target": "components/tool-shell.tsx"
+        }
+      ]
+    },
+    {
+      "name": "link-card",
+      "type": "registry:block",
+      "title": "Link card",
+      "description": "Carte cliquable : la surface (fond carte, bordure primary/40 au survol) et l'affordance (flèche qui se décale), pas le contenu. Agnostique de ce qu'elle contient, une carte « à données » générique serait une mauvaise abstraction.",
+      "dependencies": [
+        "react-aria-components",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/link-card.tsx",
+          "type": "registry:block",
+          "target": "components/link-card.tsx"
         }
       ]
     }

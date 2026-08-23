@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "link-card",
+  "title": "Link card",
+  "description": "Carte cliquable : la surface (fond carte, bordure primary/40 au survol) et l'affordance (flèche qui se décale), pas le contenu. Agnostique de ce qu'elle contient, une carte « à données » générique serait une mauvaise abstraction.",
+  "dependencies": [
+    "react-aria-components",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/alexandremace/link-card.tsx",
+      "content": "\"use client\"\n\nimport type * as React from \"react\"\nimport { ArrowUpRight } from \"lucide-react\"\nimport { Link } from \"react-aria-components\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst ESPACEMENTS = {\n  sm: \"p-4\",\n  md: \"p-4 sm:p-6\",\n} as const\n\n/**\n * Carte cliquable : la surface et l'affordance, pas le contenu.\n *\n * Volontairement agnostique de ce qu'elle contient (projet, outil, source…) :\n * les trois usages de l'écosystème n'ont en commun que le fond, la bordure qui\n * vire au primary au survol et la flèche qui se décale. Une carte « à données »\n * générique serait une mauvaise abstraction.\n */\nfunction LinkCard({\n  href,\n  external = false,\n  arrow = true,\n  padding = \"md\",\n  className,\n  children,\n  ...props\n}: {\n  href: string\n  /** Ouvre dans un nouvel onglet. */\n  external?: boolean\n  /** Flèche en haut à droite, qui se décale au survol. */\n  arrow?: boolean\n  padding?: keyof typeof ESPACEMENTS\n  className?: string\n  children?: React.ReactNode\n} & Omit<React.ComponentProps<typeof Link>, \"className\" | \"children\">) {\n  return (\n    <Link\n      href={href}\n      {...(external\n        ? { target: \"_blank\", rel: \"noopener noreferrer\" }\n        : undefined)}\n      className={cn(\n        \"group relative flex flex-col rounded-lg border border-border bg-card transition-colors outline-none hover:border-primary/40 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50\",\n        ESPACEMENTS[padding],\n        className,\n      )}\n      {...props}\n    >\n      {arrow && (\n        <ArrowUpRight\n          aria-hidden\n          className=\"absolute top-4 right-4 size-4 text-muted-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary\"\n        />\n      )}\n      {children}\n    </Link>\n  )\n}\n\nexport { LinkCard }\n",
+      "type": "registry:block",
+      "target": "components/link-card.tsx"
+    }
+  ],
+  "type": "registry:block"
+}
