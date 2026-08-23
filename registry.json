@@ -343,6 +343,19 @@
       "dependencies": [
         "react-aria-components"
       ]
+    },
+    {
+      "name": "typeset",
+      "type": "registry:item",
+      "title": "Typeset",
+      "description": "shadcn/typeset : la prose stylée par le conteneur (.typeset), dimensionnée en em et branchée sur les tokens du thème. Un fichier CSS possédé, à éditer directement.",
+      "files": [
+        {
+          "path": "src/files/typeset.css",
+          "type": "registry:file",
+          "target": "app/typeset.css"
+        }
+      ]
     }
   ]
 }
