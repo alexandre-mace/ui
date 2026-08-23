@@ -18,6 +18,9 @@ Puis :
 
 ```bash
 npx shadcn@latest add @alexandremace/theme @alexandremace/button
+
+# composants d'écosystème (header, badge ClimateLab, footer)
+npx shadcn@latest add @alexandremace/brand @alexandremace/climatelab-badge @alexandremace/made-with-love
 ```
 
 ## Grammaire du kit
