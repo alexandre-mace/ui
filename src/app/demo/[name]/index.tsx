@@ -19,6 +19,7 @@ import {
 import { slider } from "@/app/demo/[name]/ui/slider";
 import { switchDemo } from "@/app/demo/[name]/ui/switch";
 import { tabs } from "@/app/demo/[name]/ui/tabs";
+import { textLink } from "@/app/demo/[name]/ui/text-link";
 
 interface Demo {
   name: string; // this must match the `registry.json` name
@@ -32,6 +33,7 @@ export const demos: { [name: string]: Demo } = {
   input,
   switch: switchDemo,
   slider,
+  "text-link": textLink,
   tabs,
   badge,
   checkbox,

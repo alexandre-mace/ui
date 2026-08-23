@@ -118,6 +118,22 @@
       ]
     },
     {
+      "name": "text-link",
+      "type": "registry:ui",
+      "title": "Text link",
+      "description": "Lien texte pour la prose : primary souligné en decoration-primary/40, plein au survol. La voix « action » du kit sans la boîte du bouton (le variant link du bouton garde ses classes de bouton).",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/text-link.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/text-link.tsx"
+        }
+      ]
+    },
+    {
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
