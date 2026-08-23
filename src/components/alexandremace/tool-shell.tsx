@@ -27,6 +27,7 @@ function ToolShell({
   sticky = false,
   width = "6xl",
   footer = true,
+  footerSign,
   className,
   children,
 }: {
@@ -41,6 +42,8 @@ function ToolShell({
   sticky?: boolean
   width?: keyof typeof LARGEURS
   footer?: boolean
+  /** Signature au-dessus du footer : le nom du projet en grand, par exemple. */
+  footerSign?: React.ReactNode
   className?: string
   children: React.ReactNode
 }) {
@@ -71,7 +74,14 @@ function ToolShell({
         {children}
       </main>
 
-      {footer && <MadeWithLove className="mt-auto pb-8" />}
+      {footerSign && (
+        <div className="mt-auto pt-20 text-center text-lg font-semibold tracking-tight sm:pt-32 md:text-3xl">
+          {footerSign}
+        </div>
+      )}
+      {footer && (
+        <MadeWithLove className={cn("pb-8", !footerSign && "mt-auto")} />
+      )}
     </div>
   )
 }
