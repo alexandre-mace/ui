@@ -373,6 +373,37 @@
           "target": "app/typeset.css"
         }
       ]
+    },
+    {
+      "name": "page-hero",
+      "type": "registry:block",
+      "title": "Page hero",
+      "description": "Titre de page et paragraphe d'accroche. Deux tailles : « page » pour les pages qui accueillent, « compact » pour les en-têtes d'outil où l'interface démarre juste en dessous. Titres en semibold : à grande taille la taille fait l'autorité, la graisse ne fait qu'alourdir.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/page-hero.tsx",
+          "type": "registry:block",
+          "target": "components/page-hero.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tool-shell",
+      "type": "registry:block",
+      "title": "Tool shell",
+      "description": "Coquille d'un outil du ClimateLab : logo-lien à gauche, badge à droite, footer collé en bas. Point d'entrée d'un nouvel outil, il installe brand, climatelab-badge et made-with-love.",
+      "registryDependencies": [
+        "https://ui.alexandremace.fr/r/brand.json",
+        "https://ui.alexandremace.fr/r/climatelab-badge.json",
+        "https://ui.alexandremace.fr/r/made-with-love.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/tool-shell.tsx",
+          "type": "registry:block",
+          "target": "components/tool-shell.tsx"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "page-hero",
+  "title": "Page hero",
+  "description": "Titre de page et paragraphe d'accroche. Deux tailles : « page » pour les pages qui accueillent, « compact » pour les en-têtes d'outil où l'interface démarre juste en dessous. Titres en semibold : à grande taille la taille fait l'autorité, la graisse ne fait qu'alourdir.",
+  "files": [
+    {
+      "path": "src/components/alexandremace/page-hero.tsx",
+      "content": "import type * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst TAILLES = {\n  /** Pages qui accueillent : la taille fait l'autorité, le semibold suffit. */\n  page: \"text-4xl font-semibold tracking-tight text-balance sm:text-5xl\",\n  /** En-têtes d'outil : l'interface démarre juste en dessous, le titre s'efface. */\n  compact: \"text-2xl font-semibold tracking-tight text-balance sm:text-3xl\",\n} as const\n\nconst LARGEURS = {\n  xl: \"max-w-xl\",\n  \"2xl\": \"max-w-2xl\",\n  \"3xl\": \"max-w-3xl\",\n} as const\n\n/**\n * Titre de page et paragraphe d'accroche.\n *\n * Le lead passe par `children` et non par une prop texte : son emphase\n * (`<span className=\"font-medium text-foreground\">`) fait partie de la\n * grammaire éditoriale, une chaîne la perdrait.\n */\nfunction PageHero({\n  title,\n  media,\n  size = \"page\",\n  align = \"start\",\n  width = \"2xl\",\n  className,\n  children,\n}: {\n  title: React.ReactNode\n  /** Emoji ou illustration au-dessus du titre. */\n  media?: React.ReactNode\n  size?: keyof typeof TAILLES\n  align?: \"start\" | \"center\"\n  width?: keyof typeof LARGEURS\n  className?: string\n  children?: React.ReactNode\n}) {\n  const centre = align === \"center\"\n  return (\n    <section\n      className={cn(\n        \"flex flex-col\",\n        LARGEURS[width],\n        centre && \"mx-auto items-center text-center\",\n        className,\n      )}\n    >\n      {media}\n      <h1 className={cn(TAILLES[size], media && \"mt-4\")}>{title}</h1>\n      {children && (\n        <p className=\"mt-4 text-base leading-relaxed text-pretty text-muted-foreground sm:text-lg\">\n          {children}\n        </p>\n      )}\n    </section>\n  )\n}\n\nexport { PageHero }\n",
+      "type": "registry:block",
+      "target": "components/page-hero.tsx"
+    }
+  ],
+  "type": "registry:block"
+}
