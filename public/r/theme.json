@@ -4,6 +4,10 @@
   "title": "Alexandre Macé",
   "description": "Thème de base : fond sable, bleu #0737FF, thème clair unique. Chaque projet peut surcharger ses tokens d'identité. Police : Geist via le paquet npm geist (reco Vercel).",
   "cssVars": {
+    "theme": {
+      "font-sans": "var(--font-geist-sans), system-ui, sans-serif",
+      "font-mono": "var(--font-geist-mono), monospace"
+    },
     "light": {
       "radius": "0.625rem",
       "background": "#FAF8F0",
@@ -32,10 +36,6 @@
     }
   },
   "css": {
-    "@theme inline": {
-      "--font-sans": "var(--font-geist-sans), system-ui, sans-serif",
-      "--font-mono": "var(--font-geist-mono), monospace"
-    },
     "@layer base": {
       "body": {
         "-webkit-font-smoothing": "antialiased",
