@@ -346,6 +346,23 @@
       ]
     },
     {
+      "name": "search-trigger",
+      "type": "registry:ui",
+      "title": "Search trigger",
+      "description": "Déclencheur de la recherche rapide : un bouton qui a l'allure d'un champ (icône, invite, raccourci ⌘K). Il porte lui-même l'écoute du raccourci, pour que les projets cessent de réécrire le même useEffect. À associer au CommandDialog de l'item command.",
+      "dependencies": [
+        "react-aria-components",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/search-trigger.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/search-trigger.tsx"
+        }
+      ]
+    },
+    {
       "name": "tag-filter",
       "type": "registry:component",
       "title": "Tag filter",
