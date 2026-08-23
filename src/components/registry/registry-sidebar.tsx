@@ -22,7 +22,6 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Sidebar,
   SidebarContent,
@@ -124,8 +123,7 @@ export function RegistrySidebar() {
         </div>
       </SidebarHeader>
 
-      <SidebarContent>
-        <ScrollArea className="h-full w-full pr-2">
+      <SidebarContent className="pr-2">
           <Collapsible defaultOpen={true} className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
@@ -276,7 +274,6 @@ export function RegistrySidebar() {
               </CollapsibleContent>
             </SidebarGroup>
           </Collapsible>
-        </ScrollArea>
       </SidebarContent>
 
       <SidebarFooter>
