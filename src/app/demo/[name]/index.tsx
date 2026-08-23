@@ -9,6 +9,13 @@ import { input } from "@/app/demo/[name]/ui/input";
 import { madeWithLove } from "@/app/demo/[name]/ui/made-with-love";
 import { tagFilter } from "@/app/demo/[name]/ui/tag-filter";
 import { toggleGroupAm } from "@/app/demo/[name]/ui/toggle-group-am";
+import {
+  commandDemo,
+  dialogDemo,
+  inputGroupDemo,
+  textareaDemo,
+  toggleDemo,
+} from "@/app/demo/[name]/ui/kit-primitives";
 import { slider } from "@/app/demo/[name]/ui/slider";
 import { switchDemo } from "@/app/demo/[name]/ui/switch";
 import { tabs } from "@/app/demo/[name]/ui/tabs";
@@ -33,4 +40,9 @@ export const demos: { [name: string]: Demo } = {
   "made-with-love": madeWithLove,
   "toggle-group": toggleGroupAm,
   "tag-filter": tagFilter,
+  toggle: toggleDemo,
+  textarea: textareaDemo,
+  dialog: dialogDemo,
+  "input-group": inputGroupDemo,
+  command: commandDemo,
 };
