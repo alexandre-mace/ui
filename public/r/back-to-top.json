@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "back-to-top",
+  "title": "Back to top",
+  "description": "Bouton flottant de retour en haut, qui apparaît une fois la page défilée. Seuil et défilement doux paramétrables. Reprend l'allure du bouton outline en taille icône, sans en dépendre.",
+  "dependencies": [
+    "react-aria-components",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/alexandremace/back-to-top.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ArrowUp } from \"lucide-react\"\nimport { Button } from \"react-aria-components\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Bouton flottant de retour en haut, qui apparaît une fois la page défilée.\n *\n * Reprend l'allure du bouton outline en taille icône, mais autosuffisant sur\n * react-aria : le site du registry garde son propre bouton radix, un import\n * `@/components/ui/button` n'y résoudrait pas sur la bonne implémentation.\n */\nfunction BackToTop({\n  threshold = 300,\n  smooth = true,\n  label = \"Revenir en haut de la page\",\n  className,\n}: {\n  /** Défilement, en pixels, à partir duquel le bouton apparaît. */\n  threshold?: number\n  smooth?: boolean\n  label?: string\n  className?: string\n}) {\n  const [visible, setVisible] = React.useState(false)\n\n  React.useEffect(() => {\n    const surDefilement = () => setVisible(window.scrollY > threshold)\n    surDefilement()\n    window.addEventListener(\"scroll\", surDefilement, { passive: true })\n    return () => window.removeEventListener(\"scroll\", surDefilement)\n  }, [threshold])\n\n  return (\n    <Button\n      aria-label={label}\n      onPress={() =>\n        window.scrollTo({ top: 0, behavior: smooth ? \"smooth\" : \"auto\" })\n      }\n      className={cn(\n        \"fixed right-5 bottom-5 z-50 inline-flex size-8 shrink-0 items-center justify-center rounded-lg border border-border bg-card text-sm font-medium transition-all duration-300 outline-none select-none hover:bg-muted hover:text-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50\",\n        visible\n          ? \"translate-y-0 opacity-100\"\n          : \"pointer-events-none translate-y-16 opacity-0\",\n        className,\n      )}\n    >\n      <ArrowUp className=\"size-4\" />\n    </Button>\n  )\n}\n\nexport { BackToTop }\n",
+      "type": "registry:block",
+      "target": "components/back-to-top.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

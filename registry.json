@@ -458,6 +458,23 @@
           "target": "components/link-card.tsx"
         }
       ]
+    },
+    {
+      "name": "back-to-top",
+      "type": "registry:block",
+      "title": "Back to top",
+      "description": "Bouton flottant de retour en haut, qui apparaît une fois la page défilée. Seuil et défilement doux paramétrables. Reprend l'allure du bouton outline en taille icône, sans en dépendre.",
+      "dependencies": [
+        "react-aria-components",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/back-to-top.tsx",
+          "type": "registry:block",
+          "target": "components/back-to-top.tsx"
+        }
+      ]
     }
   ]
 }
