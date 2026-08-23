@@ -3,6 +3,9 @@
   "name": "made-with-love",
   "title": "Made with love",
   "description": "Footer « Fait avec amour par… », commun à tous les projets.",
+  "dependencies": [
+    "react-aria-components"
+  ],
   "files": [
     {
       "path": "src/components/alexandremace/made-with-love.tsx",
