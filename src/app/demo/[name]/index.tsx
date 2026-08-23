@@ -7,6 +7,8 @@ import { checkbox } from "@/app/demo/[name]/ui/checkbox";
 import { climatelabBadge } from "@/app/demo/[name]/ui/climatelab-badge";
 import { input } from "@/app/demo/[name]/ui/input";
 import { madeWithLove } from "@/app/demo/[name]/ui/made-with-love";
+import { tagFilter } from "@/app/demo/[name]/ui/tag-filter";
+import { toggleGroupAm } from "@/app/demo/[name]/ui/toggle-group-am";
 import { slider } from "@/app/demo/[name]/ui/slider";
 import { switchDemo } from "@/app/demo/[name]/ui/switch";
 import { tabs } from "@/app/demo/[name]/ui/tabs";
@@ -29,4 +31,6 @@ export const demos: { [name: string]: Demo } = {
   brand,
   "climatelab-badge": climatelabBadge,
   "made-with-love": madeWithLove,
+  "toggle-group": toggleGroupAm,
+  "tag-filter": tagFilter,
 };

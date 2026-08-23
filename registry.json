@@ -213,6 +213,136 @@
       "dependencies": [
         "react-aria-components"
       ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "Bouton bascule accessible sur base react-aria-components.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components",
+        "class-variance-authority"
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "Groupe de boutons bascule (sélection simple ou multiple) sur base react-aria-components.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://ui.alexandremace.fr/r/toggle.json"
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Zone de texte sur base react-aria-components.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/textarea.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components"
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Boîte de dialogue modale sur base react-aria-components.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "registryDependencies": [
+        "https://ui.alexandremace.fr/r/button.json"
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "Champ composé (addons, boutons) sur base react-aria-components.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/input-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "registryDependencies": [
+        "https://ui.alexandremace.fr/r/button.json",
+        "https://ui.alexandremace.fr/r/input.json",
+        "https://ui.alexandremace.fr/r/textarea.json"
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "Palette de commandes (recherche rapide ⌘K) sur base react-aria-components.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/command.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/command.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://ui.alexandremace.fr/r/dialog.json",
+        "https://ui.alexandremace.fr/r/input-group.json"
+      ]
+    },
+    {
+      "name": "tag-filter",
+      "type": "registry:component",
+      "title": "Tag filter",
+      "description": "Filtres par tag en chips (pattern des filtres de projets), sélection simple ou multiple. Autosuffisant sur react-aria.",
+      "files": [
+        {
+          "path": "src/components/alexandremace/tag-filter.tsx",
+          "type": "registry:component",
+          "target": "components/tag-filter.tsx"
+        }
+      ],
+      "dependencies": [
+        "react-aria-components"
+      ]
     }
   ]
 }

@@ -15,7 +15,7 @@
 import { execSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
-const STOCK = ["switch", "tabs", "badge", "checkbox"];
+const STOCK = ["switch", "tabs", "badge", "checkbox", "toggle", "toggle-group", "textarea", "dialog", "input-group", "command"];
 const DEVIATED = ["button", "slider", "input"];
 const APPLY = process.argv.includes("--apply");
 
@@ -31,7 +31,10 @@ execSync(
 let changes = 0;
 
 for (const name of [...STOCK, ...DEVIATED]) {
-  const upstream = readFileSync(fixturePath(name), "utf8");
+  // nos copies utilisent des imports relatifs (./x) portables ; le stock résolu
+  // utilise @/components/ui/x : on normalise avant de comparer.
+  const normalize = (code) => code.replaceAll('from "@/components/ui/', 'from "./');
+  const upstream = normalize(readFileSync(fixturePath(name), "utf8"));
   const local = readFileSync(localPath(name), "utf8");
 
   if (upstream.trim() === local.trim()) {
