@@ -56,7 +56,7 @@
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
-      "description": "Button et LinkButton sur base react-aria-components (style aria-nova). Écart au stock : variant outline sur bg-card.",
+      "description": "Button et LinkButton sur base react-aria-components (style aria-nova). Écarts au stock : variant outline sur bg-card, hover du secondary en color-mix oklab (l'oklch du stock perd la teinte chaude avec une encre achromatique).",
       "dependencies": [
         "react-aria-components",
         "class-variance-authority"

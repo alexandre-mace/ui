@@ -8,7 +8,8 @@
  *   pour re-merger l'écart à la main.
  *
  * Écarts au stock :
- * - button : variant outline sur bg-card (surfaces posées sur le fond sable)
+ * - button : variant outline sur bg-card (surfaces posées sur le fond sable),
+ *   hover secondary en color-mix oklab (oklch perd la teinte avec l'encre)
  * - slider : piste h-1.5 bg-neutral-300/70, poignée size-4 (lisibilité)
  * - input : halo de focus adouci (ring-ring/25)
  */
