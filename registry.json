@@ -290,7 +290,7 @@
       "name": "input-group",
       "type": "registry:ui",
       "title": "Input Group",
-      "description": "Champ composé (addons, boutons) sur base react-aria-components.",
+      "description": "Champ composé (addons, boutons) sur base react-aria-components. Écart au stock : halo de focus adouci (ring-ring/25), aligné sur l'item input.",
       "files": [
         {
           "path": "src/components/alexandremace/input-group.tsx",

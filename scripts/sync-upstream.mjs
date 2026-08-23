@@ -12,12 +12,13 @@
  *   hover secondary en color-mix oklab (oklch perd la teinte avec l'encre)
  * - slider : piste h-1.5 bg-neutral-300/70, poignée size-4 (lisibilité)
  * - input : halo de focus adouci (ring-ring/25)
+ * - input-group : même halo adouci que input
  */
 import { execSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
-const STOCK = ["switch", "tabs", "badge", "checkbox", "toggle", "toggle-group", "textarea", "dialog", "input-group", "command"];
-const DEVIATED = ["button", "slider", "input"];
+const STOCK = ["switch", "tabs", "badge", "checkbox", "toggle", "toggle-group", "textarea", "dialog", "command"];
+const DEVIATED = ["button", "slider", "input", "input-group"];
 const APPLY = process.argv.includes("--apply");
 
 const localPath = (name) => `src/components/alexandremace/${name}.tsx`;
