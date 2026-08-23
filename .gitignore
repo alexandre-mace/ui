@@ -3,3 +3,5 @@ node_modules
 .vercel
 upstream
 fixtures/sync/components
+
+*.tsbuildinfo
