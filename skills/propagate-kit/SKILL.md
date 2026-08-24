@@ -43,6 +43,18 @@ Diffuse un changement du registry (`~/dev/alex/ui`, publié sur
 - **Ne jamais éditer `components/ui/` ou `components/alexandremace/`
   localement dans un consommateur.** Un besoin local est soit un vrai écart à
   remonter dans le kit, soit un cas d'usage à styler via `className`.
+- **Le kit est sur base Base UI (base-nova) depuis le 24/08/2026.** Un
+  consommateur encore sur la base aria doit être migré en entier au moment où
+  il reçoit un composant Base UI : jamais les deux bases dans un même projet.
+  Dialecte à convertir dans les pages : `onPress`→`onClick`,
+  `isDisabled`→`disabled`, `defaultSelected`→`defaultChecked` (checkbox,
+  switch) ou `defaultPressed` (toggle), `selectedKeys`/`onSelectionChange`→
+  `value`/`onValueChange`, `minValue`/`maxValue`→`min`/`max`, items par
+  `value=` (plus `id=`), tag-filter en `multiple` + `aria-pressed`. Le
+  `LinkButton` survit (réimplémenté sur `<a>`), les imports ne changent pas.
+  Compositions : Dialog passe par `DialogContent`, les triggers composent via
+  `render={}` (pas d'`asChild` non plus). Retirer `react-aria-components` du
+  package.json, `@base-ui/react` arrive via le CLI.
 
 ## Les consommateurs
 
