@@ -61,9 +61,9 @@
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
-      "description": "Button et LinkButton sur base react-aria-components (style aria-nova). Écarts au stock : variant outline sur bg-card, hover du secondary en color-mix oklab (l'oklch du stock perd la teinte chaude avec une encre achromatique).",
+      "description": "Button et LinkButton sur base Base UI (style base-nova). Écarts au stock : variant outline sur bg-card, hover du secondary en color-mix oklab (l'oklch du stock perd la teinte chaude avec une encre achromatique).",
       "dependencies": [
-        "react-aria-components",
+        "@base-ui/react",
         "class-variance-authority"
       ],
       "files": [
@@ -78,9 +78,9 @@
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
-      "description": "Champ de saisie sur base react-aria-components. Écart au stock : halo de focus adouci (ring-ring/25), la bordure ring garde le signal.",
+      "description": "Champ de saisie sur base Base UI. Écart au stock : halo de focus adouci (ring-ring/25), la bordure ring garde le signal.",
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ],
       "files": [
         {
@@ -94,9 +94,9 @@
       "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
-      "description": "Interrupteur accessible sur base react-aria-components.",
+      "description": "Interrupteur accessible sur base Base UI.",
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ],
       "files": [
         {
@@ -110,9 +110,9 @@
       "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
-      "description": "Curseur sur base react-aria-components. Écart au stock : piste plus visible (h-1.5, neutral-300/70) et poignée size-4.",
+      "description": "Curseur sur base Base UI. Écart au stock : piste plus visible (h-1.5, neutral-300/70) et poignée size-4.",
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ],
       "files": [
         {
@@ -128,7 +128,7 @@
       "title": "Text link",
       "description": "Lien texte pour la prose : primary souligné en decoration-primary/40, plein au survol. La voix « action » du kit sans la boîte du bouton (le variant link du bouton garde ses classes de bouton).",
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ],
       "files": [
         {
@@ -142,9 +142,9 @@
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
-      "description": "Onglets sur base react-aria-components. Écart au stock : l'onglet actif est en bg-card, pas bg-background (le stock suppose un fond blanc ; sur notre fond sable, bg-background ne détache pas l'onglet actif de la liste).",
+      "description": "Onglets sur base Base UI. Écart au stock : l'onglet actif est en bg-card, pas bg-background (le stock suppose un fond blanc ; sur notre fond sable, bg-background ne détache pas l'onglet actif de la liste).",
       "dependencies": [
-        "react-aria-components",
+        "@base-ui/react",
         "class-variance-authority"
       ],
       "files": [
@@ -175,7 +175,7 @@
       "name": "alert",
       "type": "registry:ui",
       "title": "Alert",
-      "description": "Alerte sur base react-aria-components. Écarts au stock : trois variants de plus (warning, success, info) sur les tokens du thème, et un lavis coloré en fond plutôt que bg-card (sur nos panneaux déjà en couleur carte, une alerte en bg-card ne se détache plus). La description suit la couleur du variant à 90 % ; info fait exception avec une description en muted, c'est le ton de contexte.",
+      "description": "Alerte sur base Base UI. Écarts au stock : trois variants de plus (warning, success, info) sur les tokens du thème, et un lavis coloré en fond plutôt que bg-card (sur nos panneaux déjà en couleur carte, une alerte en bg-card ne se détache plus). La description suit la couleur du variant à 90 % ; info fait exception avec une description en muted, c'est le ton de contexte.",
       "dependencies": [
         "class-variance-authority"
       ],
@@ -191,9 +191,9 @@
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
-      "description": "Case à cocher accessible sur base react-aria-components.",
+      "description": "Case à cocher accessible sur base Base UI.",
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ],
       "files": [
         {
@@ -216,7 +216,7 @@
         }
       ],
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ]
     },
     {
@@ -232,7 +232,7 @@
         }
       ],
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ]
     },
     {
@@ -248,14 +248,14 @@
         }
       ],
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ]
     },
     {
       "name": "toggle",
       "type": "registry:ui",
       "title": "Toggle",
-      "description": "Bouton bascule accessible sur base react-aria-components.",
+      "description": "Bouton bascule accessible sur base Base UI.",
       "files": [
         {
           "path": "src/components/alexandremace/toggle.tsx",
@@ -264,7 +264,7 @@
         }
       ],
       "dependencies": [
-        "react-aria-components",
+        "@base-ui/react",
         "class-variance-authority"
       ]
     },
@@ -272,7 +272,7 @@
       "name": "toggle-group",
       "type": "registry:ui",
       "title": "Toggle Group",
-      "description": "Groupe de boutons bascule (sélection simple ou multiple) sur base react-aria-components.",
+      "description": "Groupe de boutons bascule (sélection simple ou multiple) sur base Base UI.",
       "files": [
         {
           "path": "src/components/alexandremace/toggle-group.tsx",
@@ -281,7 +281,7 @@
         }
       ],
       "dependencies": [
-        "react-aria-components",
+        "@base-ui/react",
         "class-variance-authority"
       ],
       "registryDependencies": [
@@ -292,7 +292,7 @@
       "name": "textarea",
       "type": "registry:ui",
       "title": "Textarea",
-      "description": "Zone de texte sur base react-aria-components.",
+      "description": "Zone de texte sur base Base UI.",
       "files": [
         {
           "path": "src/components/alexandremace/textarea.tsx",
@@ -301,14 +301,14 @@
         }
       ],
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ]
     },
     {
       "name": "dialog",
       "type": "registry:ui",
       "title": "Dialog",
-      "description": "Boîte de dialogue modale sur base react-aria-components.",
+      "description": "Boîte de dialogue modale sur base Base UI.",
       "files": [
         {
           "path": "src/components/alexandremace/dialog.tsx",
@@ -317,7 +317,7 @@
         }
       ],
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ],
       "registryDependencies": [
         "https://ui.alexandremace.fr/r/button.json"
@@ -327,7 +327,7 @@
       "name": "input-group",
       "type": "registry:ui",
       "title": "Input Group",
-      "description": "Champ composé (addons, boutons) sur base react-aria-components. Écart au stock : halo de focus adouci (ring-ring/25), aligné sur l'item input.",
+      "description": "Champ composé (addons, boutons) sur base Base UI. Écart au stock : halo de focus adouci (ring-ring/25), aligné sur l'item input.",
       "files": [
         {
           "path": "src/components/alexandremace/input-group.tsx",
@@ -336,7 +336,7 @@
         }
       ],
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ],
       "registryDependencies": [
         "https://ui.alexandremace.fr/r/button.json",
@@ -348,7 +348,7 @@
       "name": "command",
       "type": "registry:ui",
       "title": "Command",
-      "description": "Palette de commandes (recherche rapide ⌘K) sur base react-aria-components.",
+      "description": "Palette de commandes (recherche rapide ⌘K) sur base Base UI.",
       "files": [
         {
           "path": "src/components/alexandremace/command.tsx",
@@ -357,7 +357,7 @@
         }
       ],
       "dependencies": [
-        "react-aria-components",
+        "@base-ui/react",
         "lucide-react"
       ],
       "registryDependencies": [
@@ -371,7 +371,7 @@
       "title": "Search trigger",
       "description": "Déclencheur de la recherche rapide : un bouton qui a l'allure d'un champ (icône, invite, raccourci ⌘K). Il porte lui-même l'écoute du raccourci, pour que les projets cessent de réécrire le même useEffect. À associer au CommandDialog de l'item command.",
       "dependencies": [
-        "react-aria-components",
+        "@base-ui/react",
         "lucide-react"
       ],
       "files": [
@@ -386,7 +386,7 @@
       "name": "tag-filter",
       "type": "registry:component",
       "title": "Tag filter",
-      "description": "Filtres par tag en chips (pattern des filtres de projets), sélection simple ou multiple. Autosuffisant sur react-aria.",
+      "description": "Filtres par tag en chips (pattern des filtres de projets), sélection simple ou multiple. Autosuffisant sur le ToggleGroup de Base UI.",
       "files": [
         {
           "path": "src/components/alexandremace/tag-filter.tsx",
@@ -395,7 +395,7 @@
         }
       ],
       "dependencies": [
-        "react-aria-components"
+        "@base-ui/react"
       ]
     },
     {
@@ -448,7 +448,7 @@
       "title": "Link card",
       "description": "Carte cliquable : la surface (fond carte, bordure primary/40 au survol) et l'affordance (flèche qui se décale), pas le contenu. Agnostique de ce qu'elle contient, une carte « à données » générique serait une mauvaise abstraction.",
       "dependencies": [
-        "react-aria-components",
+        "@base-ui/react",
         "lucide-react"
       ],
       "files": [
@@ -465,7 +465,7 @@
       "title": "Back to top",
       "description": "Bouton flottant de retour en haut, qui apparaît une fois la page défilée. Seuil et défilement doux paramétrables. Reprend l'allure du bouton outline en taille icône, sans en dépendre.",
       "dependencies": [
-        "react-aria-components",
+        "@base-ui/react",
         "lucide-react"
       ],
       "files": [

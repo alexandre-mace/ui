@@ -4,12 +4,12 @@
   "title": "ClimateLab badge",
   "description": "Badge « un outil du ClimateLab » avec lien vers climatelab.fr, commun aux outils du lab.",
   "dependencies": [
-    "react-aria-components"
+    "@base-ui/react"
   ],
   "files": [
     {
       "path": "src/components/alexandremace/climatelab-badge.tsx",
-      "content": "\"use client\"\n\nimport Image from \"next/image\"\nimport { Link } from \"react-aria-components\"\nimport { cn } from \"@/lib/utils\"\n\n/** Badge « un outil du ClimateLab », à poser à droite du header des outils. */\nfunction ClimateLabBadge({ className }: { className?: string }) {\n  return (\n    <div className={cn(\"flex items-center gap-2.5 text-sm\", className)}>\n      <span className=\"hidden md:inline-block\">un outil du</span>\n      <Link\n        href=\"https://climatelab.fr\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n        className=\"inline-flex items-center gap-1.5 rounded-md text-sm font-medium whitespace-nowrap text-primary underline-offset-4 outline-none hover:underline focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50\"\n      >\n        <Image\n          src=\"https://em-content.zobj.net/thumbs/240/apple/285/alembic_2697-fe0f.png\"\n          alt=\"Alambic\"\n          width={20}\n          height={20}\n          unoptimized\n          className=\"h-5 w-auto shrink-0\"\n        />\n        ClimateLab\n      </Link>\n    </div>\n  )\n}\n\nexport { ClimateLabBadge }\n",
+      "content": "\"use client\"\n\nimport Image from \"next/image\"\nimport { cn } from \"@/lib/utils\"\n\n/** Badge « un outil du ClimateLab », à poser à droite du header des outils. */\nfunction ClimateLabBadge({ className }: { className?: string }) {\n  return (\n    <div className={cn(\"flex items-center gap-2.5 text-sm\", className)}>\n      <span className=\"hidden md:inline-block\">un outil du</span>\n      <a\n        href=\"https://climatelab.fr\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n        className=\"inline-flex items-center gap-1.5 rounded-md text-sm font-medium whitespace-nowrap text-primary underline-offset-4 outline-none hover:underline focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50\"\n      >\n        <Image\n          src=\"https://em-content.zobj.net/thumbs/240/apple/285/alembic_2697-fe0f.png\"\n          alt=\"Alambic\"\n          width={20}\n          height={20}\n          unoptimized\n          className=\"h-5 w-auto shrink-0\"\n        />\n        ClimateLab\n      </a>\n    </div>\n  )\n}\n\nexport { ClimateLabBadge }\n",
       "type": "registry:component",
       "target": "components/climatelab-badge.tsx"
     }

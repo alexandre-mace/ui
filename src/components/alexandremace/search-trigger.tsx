@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { Search } from "lucide-react"
-import { Button } from "react-aria-components"
 
 import { cn } from "@/lib/utils"
 
@@ -11,7 +10,7 @@ import { cn } from "@/lib/utils"
  * avec l'icône, l'invite et le raccourci.
  *
  * Il porte lui-même l'écoute de ⌘K / Ctrl+K, pour que chaque projet cesse de
- * réécrire le même useEffect. Autosuffisant sur react-aria plutôt que sur le
+ * réécrire le même useEffect. Autosuffisant en <button> natif plutôt que sur le
  * bouton du kit : le site du registry garde son propre bouton, un import
  * `@/components/ui/button` n'y résoudrait pas sur la bonne implémentation.
  */
@@ -40,8 +39,8 @@ function SearchTrigger({
   }, [onOpen, shortcut])
 
   return (
-    <Button
-      onPress={onOpen}
+    <button type="button"
+      onClick={onOpen}
       aria-label={label}
       className={cn(
         "inline-flex h-8 shrink-0 items-center gap-2 rounded-lg border border-border bg-card px-2.5 text-sm whitespace-nowrap text-muted-foreground transition-colors outline-none select-none hover:bg-muted hover:text-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
@@ -57,7 +56,7 @@ function SearchTrigger({
           ⌘K
         </kbd>
       )}
-    </Button>
+    </button>
   )
 }
 

@@ -4,12 +4,12 @@
   "title": "Brand",
   "description": "Logo et nom du projet en haut à gauche, lien vers la home (le domaine sans chemin).",
   "dependencies": [
-    "react-aria-components"
+    "@base-ui/react"
   ],
   "files": [
     {
       "path": "src/components/alexandremace/brand.tsx",
-      "content": "\"use client\"\n\nimport type * as React from \"react\"\nimport Image from \"next/image\"\nimport { Link } from \"react-aria-components\"\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Logo et nom du projet, en haut à gauche, lien vers la home\n * (le domaine sans chemin).\n */\nfunction Brand({\n  name,\n  logo,\n  href = \"/\",\n  className,\n}: {\n  /** Nom du projet, texte ou markup (ex. Climate + Lab en serif). */\n  name: React.ReactNode\n  /** URL de l'emoji ou du logo (image locale ou distante). */\n  logo: string\n  href?: string\n  className?: string\n}) {\n  return (\n    <Link\n      href={href}\n      className={cn(\n        \"inline-flex items-center gap-1.5 rounded-md text-sm font-medium whitespace-nowrap outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 sm:text-base\",\n        className,\n      )}\n    >\n      <Image\n        src={logo}\n        alt=\"\"\n        width={20}\n        height={20}\n        unoptimized\n        className=\"inline-block h-5 w-auto shrink-0\"\n      />\n      {name}\n    </Link>\n  )\n}\n\nexport { Brand }\n",
+      "content": "\"use client\"\n\nimport type * as React from \"react\"\nimport Image from \"next/image\"\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Logo et nom du projet, en haut à gauche, lien vers la home\n * (le domaine sans chemin).\n */\nfunction Brand({\n  name,\n  logo,\n  href = \"/\",\n  className,\n}: {\n  /** Nom du projet, texte ou markup (ex. Climate + Lab en serif). */\n  name: React.ReactNode\n  /** URL de l'emoji ou du logo (image locale ou distante). */\n  logo: string\n  href?: string\n  className?: string\n}) {\n  return (\n    <a\n      href={href}\n      className={cn(\n        \"inline-flex items-center gap-1.5 rounded-md text-sm font-medium whitespace-nowrap outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 sm:text-base\",\n        className,\n      )}\n    >\n      <Image\n        src={logo}\n        alt=\"\"\n        width={20}\n        height={20}\n        unoptimized\n        className=\"inline-block h-5 w-auto shrink-0\"\n      />\n      {name}\n    </a>\n  )\n}\n\nexport { Brand }\n",
       "type": "registry:component",
       "target": "components/brand.tsx"
     }

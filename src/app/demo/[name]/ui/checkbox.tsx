@@ -4,6 +4,6 @@ export const checkbox = {
   name: "checkbox",
   components: {
     Default: <Checkbox aria-label="Newsletter" />,
-    Selected: <Checkbox defaultSelected aria-label="Coché" />,
+    Selected: <Checkbox defaultChecked aria-label="Coché" />,
   },
 };

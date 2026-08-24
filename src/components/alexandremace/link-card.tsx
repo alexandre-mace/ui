@@ -2,7 +2,6 @@
 
 import type * as React from "react"
 import { ArrowUpRight } from "lucide-react"
-import { Link } from "react-aria-components"
 
 import { cn } from "@/lib/utils"
 
@@ -36,9 +35,9 @@ function LinkCard({
   padding?: keyof typeof ESPACEMENTS
   className?: string
   children?: React.ReactNode
-} & Omit<React.ComponentProps<typeof Link>, "className" | "children">) {
+} & Omit<React.ComponentProps<"a">, "className" | "children">) {
   return (
-    <Link
+    <a
       href={href}
       {...(external
         ? { target: "_blank", rel: "noopener noreferrer" }
@@ -57,7 +56,7 @@ function LinkCard({
         />
       )}
       {children}
-    </Link>
+    </a>
   )
 }
 

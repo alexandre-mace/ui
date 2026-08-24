@@ -1,6 +1,4 @@
-"use client"
-
-import { Link, type LinkProps } from "react-aria-components"
+import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -9,12 +7,9 @@ import { cn } from "@/lib/utils"
  * boîte du bouton. Souligné discret (decoration-primary/40) qui devient
  * plein au survol ; même style que le lien du footer made-with-love.
  */
-function TextLink({
-  className,
-  ...props
-}: Omit<LinkProps, "className"> & { className?: string }) {
+function TextLink({ className, ...props }: React.ComponentProps<"a">) {
   return (
-    <Link
+    <a
       className={cn(
         "rounded-sm font-medium text-primary underline decoration-primary/40 underline-offset-4 outline-none transition-colors hover:decoration-primary focus-visible:ring-[3px] focus-visible:ring-ring/50",
         className,

@@ -35,7 +35,7 @@ export default function ErrorPage({
             Something went wrong
           </h2>
           <div className="mt-6 flex gap-3">
-            <Button onPress={reset}>Try Again</Button>
+            <Button onClick={reset}>Try Again</Button>
             <LinkButton variant="secondary" href="/r/registry.json">
               View Registry
             </LinkButton>

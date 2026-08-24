@@ -1,5 +1,5 @@
 /**
- * Synchronise les composants du kit avec le stock aria-nova officiel.
+ * Synchronise les composants du kit avec le stock base-nova officiel.
  *
  * La CLI shadcn installe le stock résolu (imports réécrits, icônes lucide)
  * dans fixtures/sync, puis on compare avec nos copies :
