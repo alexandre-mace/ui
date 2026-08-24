@@ -85,8 +85,11 @@ export const backToTopDemo: {
   name: "back-to-top",
   components: {
     Default: (
-      <div className="relative h-32 w-full max-w-sm rounded-lg border border-dashed">
-        <BackToTop threshold={-1} className="absolute right-4 bottom-4" />
+      <div className="relative h-32 w-full max-w-sm min-w-56 rounded-lg border border-dashed">
+        <BackToTop
+          threshold={-1}
+          className="pointer-events-auto absolute right-4 bottom-4 translate-y-0 opacity-100"
+        />
       </div>
     ),
   },

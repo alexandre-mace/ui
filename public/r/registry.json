@@ -292,7 +292,7 @@
       "name": "textarea",
       "type": "registry:ui",
       "title": "Textarea",
-      "description": "Zone de texte sur base Base UI.",
+      "description": "Zone de texte sur base Base UI. Écart au stock : halo de focus adouci (ring-ring/25), aligné sur input et input-group.",
       "files": [
         {
           "path": "src/components/alexandremace/textarea.tsx",
