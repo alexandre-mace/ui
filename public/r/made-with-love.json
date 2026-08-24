@@ -4,12 +4,12 @@
   "title": "Made with love",
   "description": "Footer « Fait avec amour par… », commun à tous les projets.",
   "dependencies": [
-    "react-aria-components"
+    "@base-ui/react"
   ],
   "files": [
     {
       "path": "src/components/alexandremace/made-with-love.tsx",
-      "content": "\"use client\"\n\nimport { Link } from \"react-aria-components\"\nimport { cn } from \"@/lib/utils\"\n\n/** Footer « Fait avec amour par… », commun à tous les projets. */\nfunction MadeWithLove({\n  name = \"alexandre-mace\",\n  href = \"https://github.com/alexandre-mace\",\n  className,\n}: {\n  name?: string\n  href?: string\n  className?: string\n}) {\n  return (\n    <footer\n      className={cn(\n        \"mt-16 text-center text-sm text-muted-foreground\",\n        className,\n      )}\n    >\n      Fait avec amour par{\" \"}\n      <Link\n        className=\"rounded-sm font-medium text-primary underline decoration-primary/40 underline-offset-4 outline-none transition-colors hover:decoration-primary focus-visible:ring-[3px] focus-visible:ring-ring/50\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n        href={href}\n      >\n        {name}\n      </Link>\n    </footer>\n  )\n}\n\nexport { MadeWithLove }\n",
+      "content": "\"use client\"\n\nimport { cn } from \"@/lib/utils\"\n\n/** Footer « Fait avec amour par… », commun à tous les projets. */\nfunction MadeWithLove({\n  name = \"alexandre-mace\",\n  href = \"https://github.com/alexandre-mace\",\n  className,\n}: {\n  name?: string\n  href?: string\n  className?: string\n}) {\n  return (\n    <footer\n      className={cn(\n        \"mt-16 text-center text-sm text-muted-foreground\",\n        className,\n      )}\n    >\n      Fait avec amour par{\" \"}\n      <a\n        className=\"rounded-sm font-medium text-primary underline decoration-primary/40 underline-offset-4 outline-none transition-colors hover:decoration-primary focus-visible:ring-[3px] focus-visible:ring-ring/50\"\n        target=\"_blank\"\n        rel=\"noopener noreferrer\"\n        href={href}\n      >\n        {name}\n      </a>\n    </footer>\n  )\n}\n\nexport { MadeWithLove }\n",
       "type": "registry:component",
       "target": "components/made-with-love.tsx"
     }

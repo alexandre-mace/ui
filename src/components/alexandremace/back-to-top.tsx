@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { ArrowUp } from "lucide-react"
-import { Button } from "react-aria-components"
 
 import { cn } from "@/lib/utils"
 
@@ -10,7 +9,7 @@ import { cn } from "@/lib/utils"
  * Bouton flottant de retour en haut, qui apparaît une fois la page défilée.
  *
  * Reprend l'allure du bouton outline en taille icône, mais autosuffisant sur
- * react-aria : le site du registry garde son propre bouton radix, un import
+ * <button> natif : le site du registry garde son propre bouton, un import
  * `@/components/ui/button` n'y résoudrait pas sur la bonne implémentation.
  */
 function BackToTop({
@@ -35,9 +34,9 @@ function BackToTop({
   }, [threshold])
 
   return (
-    <Button
+    <button type="button"
       aria-label={label}
-      onPress={() =>
+      onClick={() =>
         window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" })
       }
       className={cn(
@@ -49,7 +48,7 @@ function BackToTop({
       )}
     >
       <ArrowUp className="size-4" />
-    </Button>
+    </button>
   )
 }
 

@@ -5,7 +5,7 @@ export const slider = {
   components: {
     Default: (
       <div className="w-64">
-        <Slider aria-label="Intensité" defaultValue={40} minValue={0} maxValue={100} />
+        <Slider aria-label="Intensité" defaultValue={40} min={0} max={100} />
       </div>
     ),
   },

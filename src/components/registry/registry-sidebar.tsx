@@ -124,7 +124,7 @@ export function RegistrySidebar() {
       </SidebarHeader>
 
       <SidebarContent className="pr-2">
-          <Collapsible defaultExpanded className="group/collapsible">
+          <Collapsible defaultOpen className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
@@ -144,9 +144,9 @@ export function RegistrySidebar() {
                     {gettingStartedItems.map((item) => (
                       <SidebarMenuItem key={item.path}>
                         <SidebarMenuButton
-                          href={item.path}
+                          render={<a href={item.path} />}
                           isActive={pathname === item.path}
-                          onPress={() => setOpenMobile(false)}
+                          onClick={() => setOpenMobile(false)}
                         >
                             {item.title}
                         </SidebarMenuButton>
@@ -158,7 +158,7 @@ export function RegistrySidebar() {
             </SidebarGroup>
           </Collapsible>
 
-          <Collapsible defaultExpanded className="group/collapsible">
+          <Collapsible defaultOpen className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
@@ -178,9 +178,9 @@ export function RegistrySidebar() {
                     {filteredBlocks.map((item) => (
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
-                          href={`/registry/${item.name}`}
+                          render={<a href={`/registry/${item.name}`} />}
                           isActive={pathname === item.name}
-                          onPress={() => setOpenMobile(false)}
+                          onClick={() => setOpenMobile(false)}
                         >
                           {item.title}
                         </SidebarMenuButton>
@@ -192,7 +192,7 @@ export function RegistrySidebar() {
             </SidebarGroup>
           </Collapsible>
 
-          <Collapsible defaultExpanded className="group/collapsible">
+          <Collapsible defaultOpen className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
@@ -212,9 +212,9 @@ export function RegistrySidebar() {
                     {filteredComponents.map((item) => (
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
-                          href={`/registry/${item.name}`}
+                          render={<a href={`/registry/${item.name}`} />}
                           isActive={pathname === item.name}
-                          onPress={() => setOpenMobile(false)}
+                          onClick={() => setOpenMobile(false)}
                         >
                           {item.title}
                         </SidebarMenuButton>
@@ -226,7 +226,7 @@ export function RegistrySidebar() {
             </SidebarGroup>
           </Collapsible>
 
-          <Collapsible defaultExpanded className="group/collapsible">
+          <Collapsible defaultOpen className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
@@ -245,9 +245,9 @@ export function RegistrySidebar() {
                     {filteredUiItems.map((item) => (
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
-                          href={`/registry/${item.name}`}
+                          render={<a href={`/registry/${item.name}`} />}
                           isActive={pathname === item.name}
-                          onPress={() => setOpenMobile(false)}
+                          onClick={() => setOpenMobile(false)}
                         >
                           {item.title}
                         </SidebarMenuButton>

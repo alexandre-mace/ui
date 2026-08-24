@@ -14,12 +14,12 @@ export const toggleGroupAm: {
     Outline: (
       <ToggleGroup
         variant="outline"
-        defaultSelectedKeys={["b"]}
+        defaultValue={["b"]}
         aria-label="Format"
       >
-        <ToggleGroupItem id="a">Gras</ToggleGroupItem>
-        <ToggleGroupItem id="b">Italique</ToggleGroupItem>
-        <ToggleGroupItem id="c">Souligné</ToggleGroupItem>
+        <ToggleGroupItem value="a">Gras</ToggleGroupItem>
+        <ToggleGroupItem value="b">Italique</ToggleGroupItem>
+        <ToggleGroupItem value="c">Souligné</ToggleGroupItem>
       </ToggleGroup>
     ),
   },

@@ -132,7 +132,7 @@ export function BrandSidebar({
               {mainNavItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton
-                    href={item.href}
+                    render={<a href={item.href} />}
                     isActive={
                       pathname === item.href ||
                       (pathname === "" && item.href === "/")
@@ -160,7 +160,7 @@ export function BrandSidebar({
               {toolsNavItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton
-                    href={item.href}
+                    render={<a href={item.href} />}
                     isActive={pathname === item.href}
                     tooltip={item.title}
                   >

@@ -12,23 +12,23 @@ export const tagFilter: {
   name: "tag-filter",
   components: {
     Simple: (
-      <TagFilterGroup defaultSelectedKeys={["climate"]} aria-label="Filtrer">
-        <TagFilterItem id="all">all</TagFilterItem>
-        <TagFilterItem id="climate">climate</TagFilterItem>
-        <TagFilterItem id="dataviz">dataviz</TagFilterItem>
-        <TagFilterItem id="design">design</TagFilterItem>
+      <TagFilterGroup defaultValue={["climate"]} aria-label="Filtrer">
+        <TagFilterItem value="all">all</TagFilterItem>
+        <TagFilterItem value="climate">climate</TagFilterItem>
+        <TagFilterItem value="dataviz">dataviz</TagFilterItem>
+        <TagFilterItem value="design">design</TagFilterItem>
       </TagFilterGroup>
     ),
     Multiple: (
       <TagFilterGroup
-        selectionMode="multiple"
-        defaultSelectedKeys={["climate", "tooling"]}
+        multiple
+        defaultValue={["climate", "tooling"]}
         aria-label="Filtrer multiple"
       >
-        <TagFilterItem id="climate">climate</TagFilterItem>
-        <TagFilterItem id="media">media</TagFilterItem>
-        <TagFilterItem id="tooling">tooling</TagFilterItem>
-        <TagFilterItem id="culture">culture</TagFilterItem>
+        <TagFilterItem value="climate">climate</TagFilterItem>
+        <TagFilterItem value="media">media</TagFilterItem>
+        <TagFilterItem value="tooling">tooling</TagFilterItem>
+        <TagFilterItem value="culture">culture</TagFilterItem>
       </TagFilterGroup>
     ),
   },

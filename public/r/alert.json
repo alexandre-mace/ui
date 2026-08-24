@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert",
   "title": "Alert",
-  "description": "Alerte sur base react-aria-components. Écarts au stock : trois variants de plus (warning, success, info) sur les tokens du thème, et un lavis coloré en fond plutôt que bg-card (sur nos panneaux déjà en couleur carte, une alerte en bg-card ne se détache plus). La description suit la couleur du variant à 90 % ; info fait exception avec une description en muted, c'est le ton de contexte.",
+  "description": "Alerte sur base Base UI. Écarts au stock : trois variants de plus (warning, success, info) sur les tokens du thème, et un lavis coloré en fond plutôt que bg-card (sur nos panneaux déjà en couleur carte, une alerte en bg-card ne se détache plus). La description suit la couleur du variant à 90 % ; info fait exception avec une description en muted, c'est le ton de contexte.",
   "dependencies": [
     "class-variance-authority"
   ],

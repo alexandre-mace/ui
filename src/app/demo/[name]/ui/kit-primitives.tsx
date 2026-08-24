@@ -10,6 +10,8 @@ import {
 } from "@/components/alexandremace/command";
 import {
   Dialog,
+  DialogClose,
+  DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
@@ -32,9 +34,11 @@ export const dialogDemo: {
   name: "dialog",
   components: {
     Default: (
-      <DialogTrigger>
-        <Button variant="outline">Ouvrir le dialogue</Button>
-        <Dialog>
+      <Dialog>
+        <DialogTrigger render={<Button variant="outline" />}>
+          Ouvrir le dialogue
+        </DialogTrigger>
+        <DialogContent>
           <DialogHeader>
             <DialogTitle>Comment c&apos;est calculé ?</DialogTitle>
             <DialogDescription>
@@ -43,12 +47,12 @@ export const dialogDemo: {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button slot="close" variant="outline">
+            <DialogClose render={<Button variant="outline" />}>
               Fermer
-            </Button>
+            </DialogClose>
           </DialogFooter>
-        </Dialog>
-      </DialogTrigger>
+        </DialogContent>
+      </Dialog>
     ),
   },
 };
@@ -65,13 +69,13 @@ export const commandDemo: {
           <CommandInput placeholder="Rechercher..." autoFocus={false} />
           <CommandList>
             <CommandGroup heading="Projets">
-              <CommandItem id="footprint" textValue="Footprint">
+              <CommandItem value="Footprint">
                 Footprint
               </CommandItem>
-              <CommandItem id="thermometre" textValue="Thermomètre">
+              <CommandItem value="Thermomètre">
                 Thermomètre
               </CommandItem>
-              <CommandItem id="transitions" textValue="Transitions">
+              <CommandItem value="Transitions">
                 Transitions
               </CommandItem>
             </CommandGroup>
@@ -120,7 +124,7 @@ export const toggleDemo: {
   components: {
     Default: <Toggle aria-label="Gras">Gras</Toggle>,
     Outline: (
-      <Toggle variant="outline" defaultSelected aria-label="Italique">
+      <Toggle variant="outline" defaultPressed aria-label="Italique">
         Italique
       </Toggle>
     ),

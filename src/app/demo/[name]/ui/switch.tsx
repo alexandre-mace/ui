@@ -4,6 +4,6 @@ export const switchDemo = {
   name: "switch",
   components: {
     Default: <Switch aria-label="Notifications" />,
-    Selected: <Switch defaultSelected aria-label="Notifications actives" />,
+    Selected: <Switch defaultChecked aria-label="Notifications actives" />,
   },
 };

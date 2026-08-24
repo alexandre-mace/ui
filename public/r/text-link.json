@@ -4,12 +4,12 @@
   "title": "Text link",
   "description": "Lien texte pour la prose : primary souligné en decoration-primary/40, plein au survol. La voix « action » du kit sans la boîte du bouton (le variant link du bouton garde ses classes de bouton).",
   "dependencies": [
-    "react-aria-components"
+    "@base-ui/react"
   ],
   "files": [
     {
       "path": "src/components/alexandremace/text-link.tsx",
-      "content": "\"use client\"\n\nimport { Link, type LinkProps } from \"react-aria-components\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Lien texte pour la prose : la voix « action » du kit (primary) sans la\n * boîte du bouton. Souligné discret (decoration-primary/40) qui devient\n * plein au survol ; même style que le lien du footer made-with-love.\n */\nfunction TextLink({\n  className,\n  ...props\n}: Omit<LinkProps, \"className\"> & { className?: string }) {\n  return (\n    <Link\n      className={cn(\n        \"rounded-sm font-medium text-primary underline decoration-primary/40 underline-offset-4 outline-none transition-colors hover:decoration-primary focus-visible:ring-[3px] focus-visible:ring-ring/50\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { TextLink }\n",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Lien texte pour la prose : la voix « action » du kit (primary) sans la\n * boîte du bouton. Souligné discret (decoration-primary/40) qui devient\n * plein au survol ; même style que le lien du footer made-with-love.\n */\nfunction TextLink({ className, ...props }: React.ComponentProps<\"a\">) {\n  return (\n    <a\n      className={cn(\n        \"rounded-sm font-medium text-primary underline decoration-primary/40 underline-offset-4 outline-none transition-colors hover:decoration-primary focus-visible:ring-[3px] focus-visible:ring-ring/50\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { TextLink }\n",
       "type": "registry:ui",
       "target": "components/ui/text-link.tsx"
     }
