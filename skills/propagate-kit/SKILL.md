@@ -7,14 +7,14 @@ description: Propage un changement du kit @alexandremace sur les projets perso c
 
 Diffuse un changement du registry (`~/dev/alex/ui`, publié sur
 `ui.alexandremace.fr`) vers les projets perso qui le consomment. Ne concerne
-**que l'écosystème perso** — les projets pro (FEVE) n'utilisent pas ce kit.
+**que l'écosystème perso** : les projets pro (FEVE) n'utilisent pas ce kit.
 
-## Ordre des opérations — non négociable
+## Ordre des opérations : non négociable
 
 1. **Le changement vit dans le kit, jamais dans un consommateur.** Si la
    conversation part d'un problème vu dans un projet, corriger d'abord dans
    `~/dev/alex/ui/src/components/alexandremace/` (ou le theme), commiter,
-   pousser, attendre que le déploiement du registry soit `READY` — le CLI
+   pousser, attendre que le déploiement du registry soit `READY` : le CLI
    shadcn lit `ui.alexandremace.fr/r/{name}.json`, pas le disque.
 2. **Grouper avant de propager.** Si d'autres correctifs kit sont en
    discussion, les finir d'abord et propager une seule fois. Chaque
@@ -29,9 +29,9 @@ Diffuse un changement du registry (`~/dev/alex/ui`, publié sur
 5. **Commiter chaque projet** (`chore: propagation kit (<résumé>)`), pousser,
    et laisser les déploiements partir. Si le quota est atteint
    (`payment_required`), mettre en file avec un moniteur, un projet par cycle
-   d'environ 13 minutes — jamais de rafale (403).
+   d'environ 13 minutes : jamais de rafale (403).
 
-## Les pièges connus — vérifier à chaque propagation
+## Les pièges connus : vérifier à chaque propagation
 
 - **`shadcn add theme` ne réécrit PAS un `globals.css` déjà configuré.** Tout
   nouveau token (ex. `--warning`, `--success`) doit être ajouté à la main dans
@@ -47,7 +47,7 @@ Diffuse un changement du registry (`~/dev/alex/ui`, publié sur
 ## Les consommateurs
 
 `~/dev/alex/portfolio-alex`, `~/dev/alex/climat/{mix,neutral,leclimaten10minutes,footprint,transitions,thermometre,climatelab}`,
-`~/dev/alex/{state-manager,culture,taste,wealth}` — vérifier la liste réelle
+`~/dev/alex/{state-manager,culture,taste,wealth}` : vérifier la liste réelle
 avec `grep -l "@alexandremace" */components.json` avant de partir, elle bouge.
 
 ## Fin de course
