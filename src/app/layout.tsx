@@ -11,7 +11,7 @@ import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "@alexandremace/ui",
-  description: "Le registry shadcn d\u2019Alexandre Mac\u00e9 : th\u00e8me et composants partag\u00e9s entre projets, sur base React Aria",
+  description: "Le registry shadcn d\u2019Alexandre Mac\u00e9 : th\u00e8me et composants partag\u00e9s entre projets, sur Base UI",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
 

@@ -1,7 +1,7 @@
 # ui — le registry shadcn d'Alexandre Macé
 
 Registry personnel (`@alexandremace`) : thème et composants partagés entre
-projets (portfolio, Footprint…), sur base shadcn aria-nova (React Aria).
+projets (portfolio, Footprint…), sur base shadcn base-nova (Base UI).
 Construit sur le [Registry Starter](https://vercel.com/templates/next.js/shadcn-ui-registry-starter) de Vercel.
 
 ## Consommer
