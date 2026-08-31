@@ -13,6 +13,7 @@ import {
   commandDemo,
   dialogDemo,
   inputGroupDemo,
+  separatorDemo,
   textareaDemo,
   toggleDemo,
 } from "@/app/demo/[name]/ui/kit-primitives";
@@ -56,6 +57,7 @@ export const demos: { [name: string]: Demo } = {
   "search-trigger": searchTriggerDemo,
   "back-to-top": backToTopDemo,
   toggle: toggleDemo,
+  separator: separatorDemo,
   textarea: textareaDemo,
   dialog: dialogDemo,
   "input-group": inputGroupDemo,

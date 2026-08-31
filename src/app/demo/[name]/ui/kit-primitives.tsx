@@ -24,6 +24,7 @@ import {
   InputGroupInput,
   InputGroupText,
 } from "@/components/alexandremace/input-group";
+import { Separator } from "@/components/alexandremace/separator";
 import { Textarea } from "@/components/alexandremace/textarea";
 import { Toggle } from "@/components/alexandremace/toggle";
 
@@ -69,15 +70,9 @@ export const commandDemo: {
           <CommandInput placeholder="Rechercher..." autoFocus={false} />
           <CommandList>
             <CommandGroup heading="Projets">
-              <CommandItem value="Footprint">
-                Footprint
-              </CommandItem>
-              <CommandItem value="Thermomètre">
-                Thermomètre
-              </CommandItem>
-              <CommandItem value="Transitions">
-                Transitions
-              </CommandItem>
+              <CommandItem value="Footprint">Footprint</CommandItem>
+              <CommandItem value="Thermomètre">Thermomètre</CommandItem>
+              <CommandItem value="Transitions">Transitions</CommandItem>
             </CommandGroup>
           </CommandList>
         </Command>
@@ -127,6 +122,33 @@ export const toggleDemo: {
       <Toggle variant="outline" defaultPressed aria-label="Italique">
         Italique
       </Toggle>
+    ),
+  },
+};
+
+export const separatorDemo: {
+  name: string;
+  components: Record<string, ReactElement>;
+} = {
+  name: "separator",
+  components: {
+    Horizontal: (
+      <div className="max-w-sm">
+        <p className="font-medium text-sm">Bilan prévisionnel</p>
+        <Separator className="my-3" />
+        <p className="text-muted-foreground text-sm">
+          Les six scénarios de RTE à l&apos;horizon 2050.
+        </p>
+      </div>
+    ),
+    Vertical: (
+      <div className="flex h-5 items-center gap-3 text-sm">
+        <span>Nucléaire</span>
+        <Separator orientation="vertical" />
+        <span>Éolien</span>
+        <Separator orientation="vertical" />
+        <span>Solaire</span>
+      </div>
     ),
   },
 };

@@ -204,6 +204,22 @@
       ]
     },
     {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Filet de séparation, horizontal ou vertical, sur base Base UI. Les variantes d'orientation sont écrites en data-[orientation=…] : shadcn cible encore data-horizontal, un attribut booléen que Base UI n'émet plus.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "files": [
+        {
+          "path": "src/components/alexandremace/separator.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/separator.tsx"
+        }
+      ]
+    },
+    {
       "name": "brand",
       "type": "registry:component",
       "title": "Brand",

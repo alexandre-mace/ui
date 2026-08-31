@@ -44,8 +44,12 @@ documente (`TabsRootDataAttributes`, `SliderRootDataAttributes`, `ToggleGroupDat
 `SeparatorDataAttributes`). Les variantes ne matchent donc jamais : les onglets se rangeaient en
 ligne au lieu de s'empiler, et la piste du slider n'avait pas de hauteur. Corrigé le 31 août 2026
 en `data-[orientation=horizontal]:` / `data-[orientation=vertical]:` dans `tabs`, `slider`,
-`toggle-group` et le `separator` du chrome. Conséquence : `shadcn add <composant> --diff` montrera
-toujours cette différence tant que l'amont n'aura pas bougé, et il ne faut pas la reprendre.
+`toggle-group` et `separator`. Conséquence : `shadcn add <composant> --diff` montrera toujours cette
+différence tant que l'amont n'aura pas bougé, et il ne faut pas la reprendre.
+
+**`separator` est entré au registry pour cette raison.** Il était resté un composant shadcn officiel,
+donc chaque projet en gardait une copie cassée que rien ne propageait, et un `shadcn add separator`
+la ramenait. Il est désormais servi par le kit, comme le reste.
 
 **Propagation d'un token** : `shadcn add` ne réécrit pas un `globals.css` déjà configuré. Tout nouveau
 token se propage à la main dans chaque projet consommateur, la valeur dans `:root` et la
