@@ -36,6 +36,27 @@ sans qu'on le voie ; un grep sur `src/` seul manque le dossier `registry/` à la
 décision de socle change, penser aux textes de présentation (README, meta description) autant qu'au
 code.
 
+**Une divergence assumée avec l'amont.** shadcn base-nova écrit encore les variantes
+d'orientation en `data-horizontal:` / `data-vertical:`, c'est-à-dire les attributs booléens
+`[data-horizontal]` / `[data-vertical]`. Base UI 1.7 n'en émet aucun : `getStateAttributesProps`
+transforme l'état `orientation` en `data-orientation="horizontal"`, et chaque composant le
+documente (`TabsRootDataAttributes`, `SliderRootDataAttributes`, `ToggleGroupDataAttributes`,
+`SeparatorDataAttributes`). Les variantes ne matchent donc jamais : les onglets se rangeaient en
+ligne au lieu de s'empiler, et la piste du slider n'avait pas de hauteur. Corrigé le 31 août 2026
+en `data-[orientation=horizontal]:` / `data-[orientation=vertical]:` dans `tabs`, `slider`,
+`toggle-group` et le `separator` du chrome. Conséquence : `shadcn add <composant> --diff` montrera
+toujours cette différence tant que l'amont n'aura pas bougé, et il ne faut pas la reprendre.
+
 **Propagation d'un token** : `shadcn add` ne réécrit pas un `globals.css` déjà configuré. Tout nouveau
 token se propage à la main dans chaque projet consommateur, la valeur dans `:root` et la
 correspondance `--color-x` dans `@theme inline`.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
